@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>研索 · 管理学期刊搜索</title>
+<link rel="stylesheet" href="/style.css">
+<header><a class="brand" href="/">研索<span>JOURNAL FINDER</span></a><span>战略管理 · 组织研究 · 管理科学</span></header>
+<main>
+<section class="intro"><p class="eyebrow">A SMALL TOOL FOR BIG IDEAS</p><h1>德国中小企业，<br>继任与价值。</h1><p>围绕继任者缺失、企业主依赖与并购定价，建立你的文献综述。</p></section>
+<section class="workspace"><h2>研究关键词</h2><p>选择主题填入关键词，或编辑自己的检索词。统一搜索按相关度匹配，不执行严格布尔逻辑。</p><div id="presets" class="toolbar"></div><label for="boolean">EBSCO 布尔检索式（可编辑后复制到高级检索）</label><textarea id="boolean" rows="4"></textarea><button type="button" id="copy-query">复制检索式</button><span id="copy-status" role="status"></span></section>
+<form id="search-form">
+<label for="query">你想研究什么？</label><div class="searchline"><input id="query" name="q" required maxlength="500" placeholder="例如：dynamic capabilities / organizational learning"><button type="submit" id="submit">搜索文章 ↗</button></div>
+<fieldset><legend>搜索期刊</legend><div class="journals"><label><input type="checkbox" name="journal" value="asq" checked>ASQ <small>Administrative Science Quarterly</small></label><label><input type="checkbox" name="journal" value="mnsc" checked>Management Science <small>管理科学</small></label><label><input type="checkbox" name="journal" value="orsc" checked>Organization Science <small>组织科学</small></label><label><input type="checkbox" name="journal" value="smj" checked>SMJ <small>Strategic Management Journal</small></label></div></fieldset>
+<div class="filters"><label>起始年份<input type="number" name="from" min="1600" max="2200" placeholder="不限"></label><span>—</span><label>结束年份<input type="number" name="to" min="1600" max="2200" placeholder="不限"></label><label class="sort">排序方式<select name="sort"><option value="relevance">相关度优先</option><option value="newest">最新发表</option></select></label></div>
+<p class="hint">建议使用英文关键词。搜索覆盖公开元数据，摘要以出版方提供的数据为准。</p>
+</form>
+<section id="results" aria-live="polite" aria-busy="false"><div class="resulthead"><h2 id="result-title">从一个问题开始</h2><span id="count">4 本期刊 · 统一检索</span></div><p id="status">输入研究主题，查找相关论文与原文入口。</p><div id="articles"></div><div id="paging" hidden><button type="button" id="prev">← 上一页</button><span id="page-label"></span><button type="button" id="next">下一页 →</button></div></section>
+<section class="workspace"><h2>我的文献库 <span id="saved-count"></span></h2><p>收藏和笔记只保存在当前浏览器中，请及时导出备份。</p><div class="toolbar"><button id="export-csv" type="button">导出 CSV</button><button id="export-ris" type="button">导出 RIS（Zotero）</button></div><p id="storage-status" role="status"></p><div id="library"></div></section><section class="workspace"><h2>检索记录</h2><p>点击记录可恢复关键词、期刊和年份，再点击搜索执行。</p><div id="history" class="toolbar"></div></section>
+<section class="sources"><h2>数据库与期刊入口 <span>DIRECT ACCESS</span></h2><p>需要高级检索或机构全文？前往数据库与出版方；可能需要学校或机构登录。</p><nav><a id="ebsco" href="https://research.ebsco.com/c/fszmvk/search/advanced/filters" target="_blank" rel="noopener noreferrer">EBSCO 高级检索 ↗</a><a href="https://journals.sagepub.com/home/ASQ" target="_blank" rel="noopener noreferrer">ASQ ↗</a><a href="https://pubsonline.informs.org/journal/mnsc" target="_blank" rel="noopener noreferrer">Management Science ↗</a><a href="https://pubsonline.informs.org/journal/orsc" target="_blank" rel="noopener noreferrer">Organization Science ↗</a><a href="https://sms.onlinelibrary.wiley.com/journal/10970266" target="_blank" rel="noopener noreferrer">SMJ ↗</a></nav></section>
+<footer>元数据来源：Crossref · 全文权限由出版方和你的机构决定。<br>统一搜索不包含 EBSCO 的专有馆藏；EBSCO 通过独立入口访问。</footer>
+</main><script type="module" src="/app.js"></script></html>
